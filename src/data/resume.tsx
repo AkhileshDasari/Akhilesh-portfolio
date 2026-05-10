@@ -126,14 +126,20 @@ export const DATA = {
   projects: [
     {
       title: "Procurement Intelligence System",
-      href: "#",
+      href: "https://github.com/AkhileshDasari/ProAudit",
       dates: "Personal Project",
       active: true,
       description:
         "Developed an AI-powered platform to analyze tender and vendor bid PDFs used in procurement workflows. Implemented automated extraction of financial, legal, and eligibility parameters and generated compliance matrices for vendor comparison. Built a React interface for document upload, structured outputs, and integrated an AI enquiry chatbot for tender-related queries.",
       technologies: ["Python", "AI/Rule-based NLP", "React", "PDF Parsing"],
-      links: [],
-      image: "",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/AkhileshDasari/ProAudit",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "https://image.thum.io/get/width/1200/crop/600/https://github.com/AkhileshDasari/ProAudit",
       video: "",
     },
     {
