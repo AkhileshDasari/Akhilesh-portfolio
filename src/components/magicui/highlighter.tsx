@@ -27,7 +27,7 @@ export function Highlighter({
       viewport={{ once: true, margin: "-10%" }}
       {...props}
     >
-      <span className="relative z-10 font-medium text-foreground">{children}</span>
+      <span className="relative z-10 font-medium text-foreground">{children as React.ReactNode}</span>
       <motion.span
         className={cn(
           "absolute left-0 -z-10 rounded-sm",

@@ -5,7 +5,7 @@ import { DATA } from "@/data/resume";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function FunActivitiesSection() {
-  if (!DATA.funActivities || DATA.funActivities.length === 0) return null;
+  if (!DATA.funActivities) return null;
 
   return (
     <section id="fun-activities">
