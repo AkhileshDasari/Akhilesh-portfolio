@@ -72,9 +72,9 @@ export function AudioPlayer() {
         {/* CD disc */}
         <motion.div
           className={cn(
-            "relative size-12 rounded-full border-2 border-border/50 shadow-lg backdrop-blur-md overflow-hidden",
-            "bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-950",
-            "dark:from-neutral-100 dark:via-neutral-200 dark:to-neutral-50"
+            "relative size-16 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.2)] dark:shadow-[0_0_15px_rgba(255,255,255,0.05)] overflow-hidden ring-1 ring-border",
+            "bg-gradient-to-br from-[#e0e0e0] via-[#fafafa] to-[#e0e0e0]",
+            "dark:from-neutral-800 dark:via-neutral-600 dark:to-neutral-800"
           )}
           animate={isPlaying ? { rotate: 360 } : { rotate: 0 }}
           transition={
@@ -85,46 +85,51 @@ export function AudioPlayer() {
         >
           {/* CD grooves */}
           <div className="absolute inset-0 rounded-full">
-            <div className="absolute inset-[6px] rounded-full border border-white/10 dark:border-black/10" />
-            <div className="absolute inset-[10px] rounded-full border border-white/5 dark:border-black/5" />
-            <div className="absolute inset-[14px] rounded-full border border-white/10 dark:border-black/10" />
+            <div className="absolute inset-[6px] rounded-full border border-black/5 dark:border-white/5" />
+            <div className="absolute inset-[10px] rounded-full border border-black/5 dark:border-white/5" />
+            <div className="absolute inset-[14px] rounded-full border border-black/10 dark:border-white/10" />
+            <div className="absolute inset-[20px] rounded-full border border-black/5 dark:border-white/5" />
           </div>
 
           {/* CD rainbow shimmer */}
           <motion.div
-            className="absolute inset-0 rounded-full opacity-30"
+            className="absolute inset-0 rounded-full opacity-[0.35] dark:opacity-30 mix-blend-color-dodge dark:mix-blend-plus-lighter"
             style={{
               background:
-                "conic-gradient(from 0deg, transparent, rgba(139,92,246,0.3), transparent, rgba(59,130,246,0.3), transparent, rgba(16,185,129,0.3), transparent)",
+                "conic-gradient(from 0deg, transparent, rgba(255,0,0,0.4), rgba(255,165,0,0.4), rgba(255,255,0,0.4), rgba(0,128,0,0.4), rgba(0,0,255,0.4), rgba(75,0,130,0.4), rgba(238,130,238,0.4), transparent)",
             }}
             animate={isPlaying ? { rotate: -360 } : {}}
             transition={
               isPlaying
-                ? { duration: 5, repeat: Infinity, ease: "linear" }
+                ? { duration: 4, repeat: Infinity, ease: "linear" }
                 : {}
             }
           />
 
-          {/* Center hole */}
+          {/* Center hole and clear ring */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="size-4 rounded-full bg-background border border-border shadow-inner" />
+            {/* Clear plastic ring area */}
+            <div className="size-6 rounded-full bg-background/30 backdrop-blur-sm border border-black/20 dark:border-white/20 flex items-center justify-center shadow-sm">
+              {/* Actual hole */}
+              <div className="size-2.5 rounded-full bg-background shadow-inner border border-black/10 dark:border-white/10" />
+            </div>
           </div>
 
           {/* Play/Pause icon overlay */}
           <div className={cn(
-            "absolute inset-0 flex items-center justify-center transition-opacity duration-200",
+            "absolute inset-0 flex items-center justify-center transition-opacity duration-300 z-10",
             isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"
           )}>
-            <div className="size-full rounded-full bg-black/40 dark:bg-white/20 flex items-center justify-center backdrop-blur-sm">
+            <div className="size-full rounded-full bg-black/30 dark:bg-black/60 flex items-center justify-center backdrop-blur-[1px]">
               <AnimatePresence mode="wait">
                 {isPlaying ? (
                   <motion.svg
                     key="pause"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    exit={{ scale: 0 }}
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0, opacity: 0 }}
                     transition={{ duration: 0.15 }}
-                    className="size-5 text-white"
+                    className="size-6 text-white drop-shadow-md"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
@@ -134,11 +139,11 @@ export function AudioPlayer() {
                 ) : (
                   <motion.svg
                     key="play"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    exit={{ scale: 0 }}
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0, opacity: 0 }}
                     transition={{ duration: 0.15 }}
-                    className="size-5 text-white ml-0.5"
+                    className="size-6 text-white ml-1 drop-shadow-md"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >
