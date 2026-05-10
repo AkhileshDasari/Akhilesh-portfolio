@@ -1,47 +1,165 @@
 <div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
+
+<img alt="Portfolio Preview" src="YOUR_PORTFOLIO_SCREENSHOT_LINK" width="90%">
+
+# Dasari Sai Akhilesh — Cinematic AI Portfolio
+
+### Futuristic AI Engineer Portfolio built with modern web technologies, immersive motion systems, and cinematic UI design.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
 </div>
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+---
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+# 🚀 About The Project
 
-# Features
+A premium cinematic portfolio experience designed to showcase:
+- AI engineering projects
+- full stack development skills
+- modern product-building mindset
+- interactive motion systems
+- and futuristic UI aesthetics
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+This portfolio is built to feel more like:
+- an AI startup landing page,
+- an immersive digital product,
+- or a cinematic developer showcase
 
-# Getting Started Locally
+rather than a traditional resume website.
 
-1. Clone this repository to your local machine:
+---
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+# ✨ Features
 
-2. Move to the cloned directory
+- Cinematic dark futuristic UI
+- Glassmorphism design system
+- Smooth Framer Motion animations
+- Interactive project showcases
+- AI-focused developer branding
+- Responsive layouts for all devices
+- Animated skills globe
+- Premium typography and spacing
+- Scroll-triggered transitions
+- Optimized for Next.js and Vercel deployment
 
-   ```bash
-   cd portfolio
-   ```
+---
 
-3. Install dependencies:
+# 🛠️ Built With
 
-   ```bash
-   pnpm install
-   ```
+- Next.js
+- React
+- TypeScript
+- TailwindCSS
+- Framer Motion
+- Magic UI
+- Lucide React
+- Shadcn/UI
+- Vercel
 
-4. Start the local Server:
+---
 
-   ```bash
-   pnpm dev
-   ```
+# 📂 Featured Projects
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+## 📌 Procurement Intelligence System
+AI-powered procurement analysis and tender evaluation platform.
 
-# License
+### Features
+- PDF extraction
+- compliance analysis
+- vendor comparison
+- chatbot integration
+- structured procurement intelligence
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+---
+
+## 📌 Stock Market Analysis Platform
+Interactive stock analytics dashboard with beginner-friendly insights.
+
+### Features
+- RSI & EMA analytics
+- TradingView charts
+- interactive stock dashboards
+- visualization systems
+
+---
+
+## 📌 LLM College Admission FAQ Chatbot
+Conversational AI assistant for student guidance and admissions support.
+
+### Features
+- contextual AI responses
+- placement guidance
+- hostel support
+- conversational interface
+
+---
+
+## 📌 Unified College Bus Tracking System
+Real-time transport tracking and centralized monitoring platform.
+
+### Features
+- GPS-based tracking
+- Socket.IO updates
+- centralized monitoring
+- real-time route updates
+
+---
+
+# 🧠 Skills & Technologies
+
+## Languages
+- Python
+- JavaScript
+- Java
+- C
+
+## Frontend
+- React
+- HTML
+- CSS
+- TailwindCSS
+
+## Backend
+- Flask
+- Django
+- FastAPI
+- Socket.IO
+
+## Databases
+- MongoDB
+- PostgreSQL
+- MySQL
+- Firebase
+- Supabase
+
+## AI / ML
+- TensorFlow
+- PyTorch
+- NumPy
+- Pandas
+- Scikit-learn
+- SciPy
+- Matplotlib
+
+---
+
+# 📸 Portfolio Sections
+
+- Hero Section
+- About Me
+- Featured Projects
+- Skills Globe
+- Experience Timeline
+- Achievements
+- Currently Exploring
+- Contact Section
+
+---
+
+# ⚙️ Getting Started Locally
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/akhilesh-portfolio.git
