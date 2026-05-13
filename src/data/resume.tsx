@@ -78,7 +78,7 @@ export const DATA = {
         name: "Send Email",
         url: "mailto:akhileshdasari123@gmail.com",
         icon: Icons.email,
-        navbar: false,
+        navbar: true,
       },
     },
   },
