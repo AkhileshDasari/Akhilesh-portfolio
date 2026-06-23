@@ -68,6 +68,12 @@ export const DATA = {
         icon: Icons.linkedin,
         navbar: true,
       },
+      LeetCode: {
+        name: "LeetCode",
+        url: "https://leetcode.com/u/akhileshdasari_/",
+        icon: Icons.leetcode,
+        navbar: true,
+      },
       Instagram: {
         name: "Instagram",
         url: "https://www.instagram.com/akhileshdasari_/",
