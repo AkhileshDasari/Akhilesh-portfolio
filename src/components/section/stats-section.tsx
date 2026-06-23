@@ -34,14 +34,6 @@ export default function StatsSection() {
       </BlurFade>
       <BlurFade delay={BLUR_FADE_DELAY * 10.6}>
         <div className="flex flex-col gap-4">
-          {/* LeetCode Stats */}
-          <div className="w-full overflow-hidden flex justify-center bg-[#fdfdfd] dark:bg-[#1a1a1a] rounded-xl shadow-sm border border-border/50">
-            <img 
-              src={`https://leetcard.jacoblin.cool/akhileshdasari_?theme=${currentTheme}&font=Inter&border=0`} 
-              alt="LeetCode Stats" 
-              className="w-full h-auto object-contain max-w-[800px]"
-            />
-          </div>
           {/* LeetCode Heatmap */}
           <div className="w-full flex flex-col p-4 md:p-6 rounded-xl shadow-sm border border-border/50 bg-[#fdfdfd] dark:bg-[#1a1a1a] overflow-x-auto">
             <h3 className="text-sm font-medium mb-3 text-muted-foreground">LeetCode Contributions</h3>
