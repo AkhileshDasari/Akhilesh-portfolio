@@ -13,7 +13,7 @@ export const DATA = {
     "Undergraduate – Bachelor of Technology. Aspiring Artificial Intelligence Engineer.",
   summary:
     "Aspiring Artificial Intelligence Engineer who is passionate, hardworking, and driven to achieve impactful results. Highly motivated to learn and adapt to emerging technologies and challenges, with a collaborative approach to peer-driven development. Committed to contributing to organizational success while continuously growing both professionally and technically.",
-  avatarUrl: "/me.jpg",
+  avatarUrl: "/pfp.jpg",
   skills: [
     { name: "C", icon: null },
     { name: "Java", icon: Java },

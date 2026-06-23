@@ -11,6 +11,7 @@ import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import GallerySection from "@/components/section/gallery-section";
 import FunActivitiesSection from "@/components/section/fun-activities-section";
+import StatsSection from "@/components/section/stats-section";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { Highlighter } from "@/components/magicui/highlighter";
 import { IconCloud } from "@/components/magicui/icon-cloud";
@@ -172,6 +173,9 @@ export default function Page() {
             </div>
           </BlurFade>
         </div>
+      </section>
+      <section id="stats">
+        <StatsSection />
       </section>
       <section id="projects">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
