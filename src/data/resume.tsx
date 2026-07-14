@@ -13,7 +13,7 @@ export const DATA = {
     "Undergraduate – Bachelor of Technology. Aspiring Artificial Intelligence Engineer.",
   summary:
     "Aspiring Artificial Intelligence Engineer who is passionate, hardworking, and driven to achieve impactful results. Highly motivated to learn and adapt to emerging technologies and challenges, with a collaborative approach to peer-driven development. Committed to contributing to organizational success while continuously growing both professionally and technically.",
-  avatarUrl: "/pfp.jpg",
+  avatarUrl: "/pfp.jpeg",
   skills: [
     { name: "C", icon: null },
     { name: "Java", icon: Java },
@@ -206,6 +206,29 @@ export const DATA = {
         },
       ],
       image: "/cbt-preview.png",
+      video: "",
+    },
+    {
+      title: "Facial Emotion Recognition",
+      href: "https://fer-v1.vercel.app",
+      dates: "Personal Project",
+      active: true,
+      description:
+        "A real-time web application that detects faces and recognizes emotions using the device's camera. Built with face-api.js, it processes video streams directly in the browser to identify expressions like smiles and provides interactive visual feedback.",
+      technologies: ["JavaScript", "HTML5", "CSS3", "face-api.js"],
+      links: [
+        {
+          type: "Website",
+          href: "https://fer-v1.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/AkhileshDasari/facial-emotion-recognition",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "https://image.thum.io/get/width/1200/crop/600/https://fer-v1.vercel.app",
       video: "",
     },
   ],
