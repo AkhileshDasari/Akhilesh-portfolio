@@ -178,7 +178,8 @@ export default function HackathonsSection() {
               
               {DATA.hackathons.map((hackathon) => {
                 const isActive = value === hackathon.title;
-                const hasImage = Boolean(hackathon.image);
+                const imageArray = (hackathon as any).images || (hackathon.image ? [hackathon.image] : []);
+                const hasImage = imageArray.length > 0;
                 
                 return (
                   <div
@@ -191,13 +192,16 @@ export default function HackathonsSection() {
                     )}
                   >
                     {hasImage ? (
-                      <div className="relative w-full h-full flex items-center justify-center">
+                      <div className={cn("relative w-full h-full flex items-center justify-center", imageArray.length > 1 ? "gap-4 md:gap-8" : "")}>
                         <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full" />
-                        <img
-                          src={hackathon.image}
-                          alt={hackathon.title}
-                          className="max-w-full max-h-full object-contain rounded-xl shadow-2xl ring-1 ring-border/50 relative z-10 transition-transform duration-700 hover:scale-[1.02]"
-                        />
+                        {imageArray.map((imgSrc: string, idx: number) => (
+                          <img
+                            key={idx}
+                            src={imgSrc}
+                            alt={`${hackathon.title} ${idx + 1}`}
+                            className="max-w-full max-h-full object-contain rounded-xl shadow-2xl ring-1 ring-border/50 relative z-10 transition-transform duration-700 hover:scale-[1.02] flex-1 min-w-0"
+                          />
+                        ))}
                       </div>
                     ) : (
                       <div className="w-full h-full flex flex-col items-center justify-center text-center p-8 bg-card/40 backdrop-blur-sm rounded-2xl border border-border/50 shadow-xl relative z-10">
