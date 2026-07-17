@@ -8,6 +8,8 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import BlurFade from "@/components/magicui/blur-fade";
 
+import { Marquee } from "@/components/magicui/marquee";
+
 const BLUR_FADE_DELAY = 0.04;
 const DURATION = 5000;
 
@@ -173,7 +175,7 @@ export default function HackathonsSection() {
             </div>
 
             {/* Image display on the Right */}
-            <div className="w-full lg:w-7/12 relative overflow-hidden rounded-3xl border border-border/50 bg-gradient-to-br from-muted/30 to-muted/10 min-h-[300px] md:min-h-[450px] lg:min-h-[500px] shadow-inner flex items-center justify-center p-4 md:p-8 group">
+            <div className="w-full lg:w-7/12 relative overflow-hidden rounded-3xl border border-border/50 bg-gradient-to-br from-muted/30 to-muted/10 min-h-[400px] md:min-h-[500px] lg:min-h-[600px] shadow-inner flex items-center justify-center group">
               <div className="absolute inset-0 bg-grid-white/5 [mask-image:radial-gradient(ellipse_at_center,white,transparent)] z-0" />
               
               {DATA.hackathons.map((hackathon) => {
@@ -185,23 +187,31 @@ export default function HackathonsSection() {
                   <div
                     key={hackathon.title}
                     className={cn(
-                      "absolute inset-0 transition-all duration-700 ease-[cubic-bezier(0.87,0,0.13,1)] flex items-center justify-center p-6 md:p-12 z-10",
+                      "absolute inset-0 transition-all duration-700 ease-[cubic-bezier(0.87,0,0.13,1)] flex items-center justify-center z-10",
                       isActive
                         ? "opacity-100 scale-100 translate-y-0"
                         : "opacity-0 scale-95 translate-y-4 pointer-events-none"
                     )}
                   >
                     {hasImage ? (
-                      <div className={cn("relative w-full h-full flex items-center justify-center", imageArray.length > 1 ? "gap-4 md:gap-8" : "")}>
+                      <div className="relative w-full h-full flex flex-row items-center justify-center overflow-hidden rounded-3xl p-4 md:p-8">
                         <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full" />
-                        {imageArray.map((imgSrc: string, idx: number) => (
-                          <img
-                            key={idx}
-                            src={imgSrc}
-                            alt={`${hackathon.title} ${idx + 1}`}
-                            className="max-w-full max-h-full object-contain rounded-xl shadow-2xl ring-1 ring-border/50 relative z-10 transition-transform duration-700 hover:scale-[1.02] flex-1 min-w-0"
-                          />
-                        ))}
+                        <Marquee pauseOnHover vertical className="[--duration:20s] h-full flex items-center">
+                          {imageArray.map((imgSrc: string, idx: number) => (
+                            <figure
+                              key={idx}
+                              className="relative h-fit w-fit overflow-hidden rounded-xl border border-border/50 bg-card/20 hover:bg-card/40 p-2 shadow-2xl backdrop-blur-sm"
+                            >
+                              <img
+                                src={imgSrc}
+                                alt={`${hackathon.title} ${idx + 1}`}
+                                className="max-w-[280px] sm:max-w-[360px] md:max-w-[420px] max-h-[80vh] object-contain rounded-lg relative z-10 transition-transform duration-700 hover:scale-[1.02]"
+                              />
+                            </figure>
+                          ))}
+                        </Marquee>
+                        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/6 bg-gradient-to-b from-muted/30 to-transparent"></div>
+                        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/6 bg-gradient-to-t from-muted/30 to-transparent"></div>
                       </div>
                     ) : (
                       <div className="w-full h-full flex flex-col items-center justify-center text-center p-8 bg-card/40 backdrop-blur-sm rounded-2xl border border-border/50 shadow-xl relative z-10">
