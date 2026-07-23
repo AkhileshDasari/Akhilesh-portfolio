@@ -51,16 +51,25 @@ export default function LeetCodeCalendar({
     return <div className="text-sm text-muted-foreground">No data available</div>;
   }
 
+  const today = new Date();
+  const sixMonthsAgo = new Date();
+  sixMonthsAgo.setMonth(today.getMonth() - 6);
+
+  const filteredData = data.filter((activity) => {
+    const date = new Date(activity.date);
+    return date >= sixMonthsAgo;
+  });
+
   return (
     <ActivityCalendar 
-      data={data} 
+      data={filteredData} 
       theme={colorTheme}
       colorScheme={theme}
       fontSize={12}
       blockSize={12}
       blockMargin={4}
       labels={{
-        totalCount: '{{count}} submissions in the last year',
+        totalCount: '{{count}} submissions in the last 6 months',
       }}
     />
   );

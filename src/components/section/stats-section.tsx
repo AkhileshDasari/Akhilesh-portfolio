@@ -6,6 +6,17 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import LeetCodeCalendar from "./leetcode-calendar";
 
+const selectLastHalfYear = (contributions: any[]) => {
+  const today = new Date();
+  const sixMonthsAgo = new Date();
+  sixMonthsAgo.setMonth(today.getMonth() - 6);
+  
+  return contributions.filter((activity: any) => {
+    const date = new Date(activity.date);
+    return date >= sixMonthsAgo;
+  });
+};
+
 const BLUR_FADE_DELAY = 0.04;
 
 export default function StatsSection() {
@@ -35,22 +46,26 @@ export default function StatsSection() {
       <BlurFade delay={BLUR_FADE_DELAY * 10.6}>
         <div className="flex flex-col gap-4">
           {/* LeetCode Heatmap */}
-          <div className="w-full flex flex-col p-4 md:p-6 rounded-xl shadow-sm border border-border/50 bg-[#fdfdfd] dark:bg-[#1a1a1a] overflow-x-auto">
-            <h3 className="text-sm font-medium mb-3 text-muted-foreground">LeetCode Contributions</h3>
-            <div className="flex justify-center min-w-[700px]">
+          <div className="w-full flex flex-col p-5 md:p-6 rounded-2xl shadow-sm border border-border/40 bg-white dark:bg-neutral-900/40 overflow-hidden transition-colors hover:border-border/80">
+            <h3 className="text-sm font-semibold mb-4 text-foreground/80">LeetCode Contributions</h3>
+            <div className="flex justify-center overflow-x-auto pb-2 w-full">
               <LeetCodeCalendar username="akhileshdasari_" theme={currentTheme} />
             </div>
           </div>
           {/* GitHub Calendar */}
-          <div className="w-full flex flex-col p-4 md:p-6 rounded-xl shadow-sm border border-border/50 bg-[#fdfdfd] dark:bg-[#1a1a1a] overflow-x-auto">
-            <h3 className="text-sm font-medium mb-3 text-muted-foreground">GitHub Contributions</h3>
-            <div className="flex justify-center min-w-[700px]">
+          <div className="w-full flex flex-col p-5 md:p-6 rounded-2xl shadow-sm border border-border/40 bg-white dark:bg-neutral-900/40 overflow-hidden transition-colors hover:border-border/80">
+            <h3 className="text-sm font-semibold mb-4 text-foreground/80">GitHub Contributions</h3>
+            <div className="flex justify-center overflow-x-auto pb-2 w-full">
               <GitHubCalendar 
                 username="AkhileshDasari" 
                 colorScheme={currentTheme}
                 fontSize={12}
                 blockSize={12}
                 blockMargin={4}
+                transformData={selectLastHalfYear}
+                labels={{
+                  totalCount: '{{count}} contributions in the last 6 months',
+                }}
               />
             </div>
           </div>
