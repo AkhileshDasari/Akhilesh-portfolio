@@ -24,7 +24,7 @@ interface SlideProps {
   index: number
   current: number
   handleSlideClick: (index: number) => void
-  parentRef: React.RefObject<HTMLUListElement>
+  parentRef: React.RefObject<HTMLUListElement | null>
 }
 
 const Carousel = ({ slides }: CarouselProps) => {
