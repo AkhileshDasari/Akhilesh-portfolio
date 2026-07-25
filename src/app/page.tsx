@@ -45,9 +45,15 @@ export default function Page() {
                 text={DATA.description}
               />
               <BlurFade delay={BLUR_FADE_DELAY * 1.5}>
-                <p className="text-sm text-muted-foreground">
-                  I also provide freelance resume, LinkedIn, portfolio, and website support. <Link href="/services" className="text-primary underline underline-offset-4">Explore freelance services.</Link>
-                </p>
+                <div className="flex flex-wrap items-center justify-start gap-3 pt-3">
+                  <span className="text-sm text-muted-foreground">I also provide freelance resume, LinkedIn, portfolio, and website support.</span>
+                  <Link
+                    href="/services"
+                    className="rounded-full border border-border bg-white/10 px-5 py-2 text-sm font-medium text-white transition hover:bg-white/20"
+                  >
+                    Explore freelance services
+                  </Link>
+                </div>
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">

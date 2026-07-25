@@ -3,6 +3,7 @@ import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { buildWhatsAppLink, SERVICES } from "@/data/services";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import { Icons } from "@/components/icons";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -21,6 +22,15 @@ export default function ServicesPage() {
     <main className="min-h-dvh flex flex-col gap-12 relative pb-24">
       <section id="hero" className="scroll-mt-24">
         <div className="flex flex-col gap-6">
+          <div className="flex items-start justify-between gap-3">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-2 text-sm font-medium text-foreground transition hover:border-primary/70 hover:bg-background"
+            >
+              <Icons.email className="size-4 text-primary" />
+              Back to Home
+            </Link>
+          </div>
           <BlurFade delay={BLUR_FADE_DELAY}>
             <div className="flex flex-col items-center gap-4 text-center">
               <div className="flex items-center w-full">
@@ -166,7 +176,10 @@ export default function ServicesPage() {
       </section>
 
       <section id="contact" className="scroll-mt-24">
-        <div className="border rounded-xl p-8 sm:p-10 relative overflow-hidden">
+        <div className="border rounded-xl p-10 relative">
+          <div className="absolute -top-4 border bg-primary z-10 rounded-xl px-4 py-1 left-1/2 -translate-x-1/2">
+            <span className="text-background text-sm font-medium">Contact</span>
+          </div>
           <div className="absolute inset-0 top-0 left-0 right-0 h-1/2 rounded-xl overflow-hidden">
             <FlickeringGrid
               className="h-full w-full"
