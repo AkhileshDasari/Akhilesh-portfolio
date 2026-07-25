@@ -1,5 +1,4 @@
 import Navbar from "@/components/navbar";
-import FloatingWhatsAppButton from "@/components/floating-whatsapp";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
@@ -89,7 +88,6 @@ export default function RootLayout({
               {children}
             </div>
             <Navbar />
-            <FloatingWhatsAppButton />
           </TooltipProvider>
         </ThemeProvider>
       </body>

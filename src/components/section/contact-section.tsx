@@ -24,18 +24,38 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Want to chat? Just shoot me a dm{" "}
-          <Link
+          Reach me directly by email, phone, WhatsApp or LinkedIn. I&apos;m happy to help you choose the right service and book a slot.
+        </p>
+        <div className="grid w-full max-w-md grid-cols-1 gap-3 text-left sm:grid-cols-2">
+          <a
+            href={`mailto:${DATA.contact.email}`}
+            className="rounded-xl border border-border bg-background/70 px-4 py-3 text-sm text-foreground transition hover:border-primary/60"
+          >
+            Email: {DATA.contact.email}
+          </a>
+          <a
+            href="https://wa.me/919949211294"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xl border border-border bg-background/70 px-4 py-3 text-sm text-foreground transition hover:border-primary/60"
+          >
+            WhatsApp: 9949211294
+          </a>
+          <a
+            href="tel:+919949211284"
+            className="rounded-xl border border-border bg-background/70 px-4 py-3 text-sm text-foreground transition hover:border-primary/60"
+          >
+            Phone: 9949211284
+          </a>
+          <a
             href={DATA.contact.social.LinkedIn.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+            className="rounded-xl border border-border bg-background/70 px-4 py-3 text-sm text-foreground transition hover:border-primary/60"
           >
-            with a direct message on LinkedIn
-          </Link>{" "}
-          and I&apos;ll respond whenever I can. I will ignore all
-          soliciting.
-        </p>
+            LinkedIn: linkedin.com/in/akhileshdasari123
+          </a>
+        </div>
       </div>
     </div>
   );

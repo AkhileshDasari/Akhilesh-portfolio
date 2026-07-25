@@ -1,7 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { buildWhatsAppLink, SERVICES } from "@/data/services";
-import { ArrowUpRight, CheckCircle2, MessageCircle } from "lucide-react";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -26,7 +26,7 @@ export default function ServicesPage() {
               <div className="flex items-center w-full">
                 <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
                 <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-                  <span className="text-background text-sm font-medium">Services</span>
+                  <span className="text-background text-sm font-medium">Freelance services</span>
                 </div>
                 <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
               </div>
@@ -57,7 +57,7 @@ export default function ServicesPage() {
             <div className="flex items-center w-full">
               <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
               <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-                <span className="text-background text-sm font-medium">Services</span>
+                <span className="text-background text-sm font-medium">What I Offer</span>
               </div>
               <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
             </div>
@@ -181,10 +181,34 @@ export default function ServicesPage() {
           <div className="relative flex flex-col items-center gap-5 text-center">
             <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">Contact</h2>
             <div className="grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
-              <div className="rounded-lg border border-border/70 bg-background/70 p-3">Email: akhileshdasari123@gmail.com</div>
-              <div className="rounded-lg border border-border/70 bg-background/70 p-3">WhatsApp: 9949211294</div>
-              <div className="rounded-lg border border-border/70 bg-background/70 p-3">Phone: 9949211284</div>
-              <div className="rounded-lg border border-border/70 bg-background/70 p-3">LinkedIn: linkedin.com/in/akhileshdasari123</div>
+              <a
+                href="mailto:akhileshdasari123@gmail.com"
+                className="rounded-lg border border-border/70 bg-background/70 p-3 transition hover:border-primary/60"
+              >
+                Email: akhileshdasari123@gmail.com
+              </a>
+              <a
+                href="https://wa.me/919949211294"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-border/70 bg-background/70 p-3 transition hover:border-primary/60"
+              >
+                WhatsApp: 9949211294
+              </a>
+              <a
+                href="tel:+919949211284"
+                className="rounded-lg border border-border/70 bg-background/70 p-3 transition hover:border-primary/60"
+              >
+                Phone: 9949211284
+              </a>
+              <a
+                href="https://linkedin.com/in/akhileshdasari123"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-border/70 bg-background/70 p-3 transition hover:border-primary/60"
+              >
+                LinkedIn: linkedin.com/in/akhileshdasari123
+              </a>
             </div>
             <p className="max-w-xl text-sm sm:text-base text-muted-foreground leading-relaxed">
               Tell me what you need, share the basics on WhatsApp, and I’ll help you choose the right service and book a suitable slot.
@@ -201,15 +225,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <Link
-        href="https://wa.me/919949211294"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary px-4 py-3 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/20 transition hover:opacity-90"
-      >
-        <MessageCircle className="h-4 w-4" />
-        Chat
-      </Link>
     </main>
   );
 }

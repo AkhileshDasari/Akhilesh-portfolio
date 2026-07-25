@@ -44,6 +44,11 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+              <BlurFade delay={BLUR_FADE_DELAY * 1.5}>
+                <p className="text-sm text-muted-foreground">
+                  I also provide freelance resume, LinkedIn, portfolio, and website support. <Link href="/services" className="text-primary underline underline-offset-4">Explore freelance services.</Link>
+                </p>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
