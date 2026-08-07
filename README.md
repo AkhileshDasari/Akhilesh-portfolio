@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="Portfolio Preview" src="public/portfolio-preview.png" width="90%">
+<img width="1470" height="798" alt="Image" src="https://github.com/user-attachments/assets/f9b869c1-2d8a-4e12-82e8-ced1d309fa3f" />
 
 # Dasari Sai Akhilesh — Cinematic AI Portfolio
 
